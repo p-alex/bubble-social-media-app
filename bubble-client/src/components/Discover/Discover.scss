@@ -1,0 +1,73 @@
+.postsWrapper {
+  position: relative;
+  display: grid;
+  text-align: center;
+  width: 100%;
+  grid-gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  @media (max-width: 800px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+.postBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: white;
+  box-shadow: 0 0 10px rgb(228, 228, 228);
+  border-radius: 10px;
+  overflow: hidden;
+  small {
+    position: relative;
+    color: rgb(190, 190, 190);
+  }
+  &_userAndDate {
+    display: flex;
+    align-items: left;
+    flex-direction: column;
+  }
+  &_user {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    .postBox_userWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  }
+  &_likesAndComments {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    p {
+      margin-left: 5px;
+    }
+  }
+  &_likes,
+  &_comments {
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+  }
+  &_images {
+    width: 100%;
+    text-align: center;
+    img {
+      width: 100%;
+      max-height: 250px;
+    }
+  }
+}
