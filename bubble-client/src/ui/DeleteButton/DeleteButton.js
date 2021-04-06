@@ -13,7 +13,7 @@ export default function DeleteButton({ id, reload }) {
       }}
       style={{ background: "#F04A26" }}
     >
-      Delete this post
+      <i class="far fa-trash-alt"></i>Delete
     </button>
   );
 }

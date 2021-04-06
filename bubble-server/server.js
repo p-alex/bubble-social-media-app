@@ -10,6 +10,10 @@ app.use(express.json({ limit: "2mb" }));
 app.use(cors());
 app.use("/api", getPost);
 app.use("/", handlePosts);
+
+app.get("/", (req, res) => {
+  res.send("Hello server");
+});
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`SERVER STARTED ON PORT ${PORT}`);

@@ -3,22 +3,25 @@
   width: 100%;
   margin-bottom: 10px;
   word-wrap: break-word;
-  background: #111;
-  color: white;
-  padding: 10px;
+  border-left: solid var(--main-color) 4px;
+  background: rgb(236, 236, 236);
+  color: #111;
   border-radius: 10px;
+  padding: 10px;
   &_userAndDate {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-bottom: solid rgb(219, 219, 219) 2px;
+
+    padding-bottom: 10px;
   }
   &_user {
     display: flex;
     align-items: center;
-    background: #222;
-    padding: 10px;
-    border-radius: 10px;
-    color: white;
+    color: #111;
+    font-weight: bold;
+
     img {
       position: relative;
       width: 25px;

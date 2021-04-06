@@ -25,7 +25,7 @@ export default function LikeButton(props) {
             <div
               className="like_wrapper"
               onClick={(e) => handleUnlike(e, props.postId, props.googleId)}
-              style={{ cursor: "pointer" }}
+              style={{ cursor: "pointer", color: "#0A369D" }}
             >
               <i className="fas fa-heart"></i>
             </div>

@@ -9,8 +9,10 @@ export default function CommentBox({ postId, user, scrollUp }) {
   const handleSubmit = async (e, id, user) => {
     e.preventDefault();
     let data = { id, user, comment, date: Date.now() };
+    if (comment) {
+      await dispatch(addComment(data));
+    }
 
-    await dispatch(addComment(data));
     setTimeout(scrollUp());
     setComment("");
   };
@@ -25,11 +27,14 @@ export default function CommentBox({ postId, user, scrollUp }) {
     >
       <label>Comment: </label>
       <textarea
-        placeholder="Comment here..."
         value={comment}
         onChange={(e) => setComment(e.target.value)}
       ></textarea>
-      <button type="submit">Add Comment</button>
+
+      <button type="submit">
+        Add Comment
+        <i style={{ color: "red" }} class="fas fa-comment-plus"></i>
+      </button>
     </form>
   );
 }

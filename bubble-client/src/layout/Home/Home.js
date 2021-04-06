@@ -6,6 +6,8 @@ const Home = (props) => {
     <>
       <NavBar />
       <Discover />
+      <br />
+      <br />
     </>
   );
 };

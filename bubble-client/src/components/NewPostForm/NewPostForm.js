@@ -30,7 +30,7 @@ const Post = (props) => {
     e.preventDefault();
     if (data.image.length !== 0 && data.description && user) {
       axios
-        .post("/add-post", {
+        .post("https://bubble-social-media-app.herokuapp.com/add-post", {
           image: data.image,
           description: data.description,
           user,
@@ -72,7 +72,9 @@ const Post = (props) => {
       <br />
       <label>Description</label>
       <textarea name="description" onChange={handleDescription}></textarea>
-      <button type="submit">Create Post</button>
+      <button type="submit">
+        <i class="fas fa-plus"></i>Add Post
+      </button>
     </form>
   );
 };

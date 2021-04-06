@@ -11,22 +11,30 @@ export default function NavBar() {
   };
   return (
     <nav className="nav">
-      <Link to="/">Bubble</Link>
-      {user ? <Link to="/new-post">New Post</Link> : null}
+      <div className="nav_main">
+        <Link to="/">
+          <span className="nav_logo">BUBBLE</span>
+        </Link>
+        {user ? <Link to="/new-post">New Post</Link> : null}
+      </div>
+
       <div className="nav_user">
-        {user ? (
-          <>
-            <p>{user.name}</p>
-            <Link to={`/profile/${user.googleId}`}>
-              <img src={user?.imageUrl} alt={user?.name} />
-            </Link>
-          </>
-        ) : null}
-        {user ? (
-          <button onClick={handleLogout}>Logout</button>
-        ) : (
-          <Link to="/auth">Login</Link>
-        )}
+        <div className="nav_userImage">
+          {user ? (
+            <>
+              <Link to={`/profile/${user.googleId}`}>
+                <img src={user?.imageUrl} alt={user?.name} />
+              </Link>
+            </>
+          ) : null}
+        </div>
+        <div className="nav_logout">
+          {user ? (
+            <button onClick={handleLogout}>Logout</button>
+          ) : (
+            <Link to="/auth">Login</Link>
+          )}
+        </div>
       </div>
     </nav>
   );

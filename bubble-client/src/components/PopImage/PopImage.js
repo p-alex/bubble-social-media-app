@@ -4,7 +4,7 @@ export default function PopImage({ img, handleImagePopUp }) {
   return (
     <div className="imagePopOut">
       <div className="close" onClick={handleImagePopUp}>
-        CLOSE
+        <i class="fas fa-times"></i>
       </div>
       <img src={img} alt="1" />
     </div>
