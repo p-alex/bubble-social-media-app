@@ -5,4 +5,6 @@ I created this project to learn authentication and posting data to a database. D
 
 You can login with google, like posts, add a comment to a post, delete your own posts and create new posts.
 
+URL: https://bubble-social-media-app.netlify.app/
+
 
